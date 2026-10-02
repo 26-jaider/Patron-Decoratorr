@@ -22,6 +22,10 @@ async function updatePass() {
             `/api/pass?options=${encodeURIComponent(options.join(","))}`
         );
 
+        if (!response.ok) {
+            throw new Error(`Museum service returned ${response.status}`);
+        }
+
         const pass = await response.json();
 
         totalPrice.textContent =
@@ -56,6 +60,10 @@ activateButton.addEventListener("click", async () => {
         const response = await fetch(
             `/api/pass?options=${encodeURIComponent(options.join(","))}`
         );
+
+        if (!response.ok) {
+            throw new Error(`Museum service returned ${response.status}`);
+        }
 
         const pass = await response.json();
 
