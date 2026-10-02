@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Experience</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page">
+
+    <nav class="nav">
+        <a class="logo" href="#">MUSEUM<span>.</span></a>
+
+        <div class="nav-links">
+            <a href="#experience">Experience</a>
+            <a href="#services">Services</a>
+            <a href="#summary">My Pass</a>
+        </div>
+
+        <button class="nav-button" onclick="document.getElementById('summary').scrollIntoView({behavior:'smooth'})">
+            View Pass
+        </button>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-copy">
+            <p class="kicker">A NEW WAY TO VISIT</p>
+            <h1>Make the museum<br><em>your own.</em></h1>
+            <p class="hero-text">
+                Choose the experiences that make your visit memorable,
+                then create your personal museum pass.
+            </p>
+            <a class="hero-link" href="#services">Explore experiences <span>↓</span></a>
+        </div>
+
+        <div class="hero-art" aria-label="Museum building illustration">
+            <div class="sun"></div>
+            <div class="building">
+                <div class="roof"></div>
+                <div class="columns">
+                    <i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="steps"></div>
+            </div>
+            <div class="art-label">EST. 1924</div>
+        </div>
+    </header>
+
+    <section class="intro" id="experience">
+        <div>
+            <p class="kicker">THE EXPERIENCE</p>
+            <h2>One pass.<br>More possibilities.</h2>
+        </div>
+        <p class="intro-text">
+            Start with general admission and add only what you need.
+            Your selection updates instantly.
+        </p>
+    </section>
+
+    <section class="services" id="services">
+
+        <article class="service-card">
+            <div class="service-number">01</div>
+            <div class="service-icon">◉</div>
+            <h3>Audio Guide</h3>
+            <p>Explore selected works with curated stories and commentary.</p>
+            <div class="service-bottom">
+                <strong>+$4</strong>
+                <label class="toggle">
+                    <input type="checkbox" data-option="audio">
+                    <span></span>
+                </label>
+            </div>
+        </article>
+
+        <article class="service-card featured">
+            <div class="service-number">02</div>
+            <div class="service-icon">◇</div>
+            <h3>Virtual Tour</h3>
+            <p>Take an interactive digital journey through the museum.</p>
+            <div class="service-bottom">
+                <strong>+$6</strong>
+                <label class="toggle">
+                    <input type="checkbox" data-option="virtual">
+                    <span></span>
+                </label>
+            </div>
+        </article>
+
+        <article class="service-card">
+            <div class="service-number">03</div>
+            <div class="service-icon">◆</div>
+            <h3>VIP Access</h3>
+            <p>Enjoy premium rooms and access to selected special exhibits.</p>
+            <div class="service-bottom">
+                <strong>+$12</strong>
+                <label class="toggle">
+                    <input type="checkbox" data-option="vip">
+                    <span></span>
+                </label>
+            </div>
+        </article>
+
+        <article class="service-card">
+            <div class="service-number">04</div>
+            <div class="service-icon">+</div>
+            <h3>Accessibility</h3>
+            <p>Enhanced services designed for a more comfortable visit.</p>
+            <div class="service-bottom">
+                <strong>+$3</strong>
+                <label class="toggle">
+                    <input type="checkbox" data-option="accessibility">
+                    <span></span>
+                </label>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="summary-section" id="summary">
+        <div class="summary-left">
+            <p class="kicker">YOUR VISIT</p>
+            <h2>Ready when<br><em>you are.</em></h2>
+            <p>
+                Your pass includes general museum admission.
+                Add experiences above and your total will update automatically.
+            </p>
+        </div>
+
+        <div class="pass-card">
+            <div class="pass-top">
+                <span>MUSEUM PASS</span>
+                <span id="counter">0 ADD-ONS</span>
+            </div>
+
+            <div class="pass-title">
+                <span>General Admission</span>
+                <strong id="totalPrice">$15.00</strong>
+            </div>
+
+            <div class="pass-services" id="serviceList"></div>
+
+            <div class="pass-line"></div>
+
+            <button class="activate" id="activateButton">
+                Activate my pass <span>↗</span>
+            </button>
+
+            <button class="reset" id="resetButton">
+                Clear selection
+            </button>
+
+            <div class="message" id="message"></div>
+        </div>
+    </section>
+
+    <footer>
+        <span>MUSEUM EXPERIENCE</span>
+        <span>Art · History · Discovery</span>
+    </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
